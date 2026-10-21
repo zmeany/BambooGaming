@@ -10,8 +10,8 @@ const vantaTeamsData = [
             { label: "Suche", value: "Champ 3 - Grandchamp 1", isHighlight: true }
         ],
         roster: [
-            { name: "BimBim", roleBadge: "CAPTAIN", trackerUrl: "https://tracker.network" },
-            { name: "zmeany", roleBadge: "", trackerUrl: "https://tracker.network" }
+            { name: "BimBim", roleBadge: "CAPTAIN", trackerUrl: "https://rocketleague.tracker.network/rocket-league/profile/epic/NachwuchS823/overview" },
+            { name: "zmeany", roleBadge: "", trackerUrl: "https://rocketleague.tracker.network/rocket-league/profile/steam/zmeanyrl/overview" }
         ]
     }
 
