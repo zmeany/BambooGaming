@@ -1,0 +1,164 @@
+/* Globale Einstellungen */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#space-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    /* HIER GEÄNDERT: Ein moderner, edler Dunkelblau-Ton statt Tiefschwarz */
+    background-color: #08080a; 
+}
+
+
+/* --- DER NEUE ULTRAMINIMALISTISCHE HINTERGRUND --- */
+body {
+    position: relative;
+    /* Ein edles, extrem dunkles Anthrazit-Mattschwarz */
+    background-color: #060608; 
+    
+    /* Ein ganz dezenter, rauchig-blauer Lichtschein genau in der Mitte der Seite */
+    background-image: radial-gradient(circle at 50% 30%, #0d111a 0%, #060608 70%);
+    background-attachment: fixed; /* Lichtschein bleibt beim Scrollen an Ort und Stelle */
+    
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    padding-top: 140px; 
+    overflow-x: hidden;
+    
+    /* Smooth In beim Laden der Seite */
+    animation: fadeInPage 1.2s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Die schwebende Navbar aus deinem Beispielbild */
+.navbar {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1100px;
+    background-color: #0d0d0d; /* Sehr dunkles Anthrazit */
+    border: 1px solid #1a1a1a; /* Der feine, dezente Rand */
+    padding: 8px 12px;         /* Weniger Innenabstand oben/unten für einen schlanken Look */
+    border-radius: 100px;      /* Komplett rund herum abgerundet */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Linker Bereich: Rundes Logo wie im Beispiel */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding-left: 6px;
+}
+
+/* Macht dein weißes Logo rund mit schwarzem Icon-Effekt oder hält es sauber im Kreis */
+.nav-logo img {
+    height: 40px;
+    width: 40px;
+    background-color: #050505; /* Weißer Kreis-Hintergrund wie im Bild */
+    border-radius: 50%;
+    padding: 6px;              /* Abstand zum Rand des Kreises */
+    object-fit: contain;
+}
+
+/* Mittlerer Bereich: Links & Dropdown */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #cccccc; /* Etwas helleres Grau für bessere Lesbarkeit */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+/* --- DROPDOWN DESIGN --- */
+.dropdown-menu {
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    border-radius: 14px;
+    list-style: none;
+    padding: 6px 0;
+    min-width: 150px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item a {
+    display: block;
+    color: #a0a0a0;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item a:hover {
+    color: #ffffff;
+    background-color: #161616;
+}
+
+/* Rechter Bereich: Kapsel-Button für Discord */
+.nav-btn-discord {
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 10px 28px;
+    border-radius: 100px; /* Perfekte Kapsel-Form wie das "Sign Up" im Bild */
+    transition: background-color 0.2s ease;
+}
+
+.nav-btn-discord:hover {
+    background-color: #e0e0e0;
+}
