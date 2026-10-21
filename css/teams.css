@@ -1,0 +1,245 @@
+/* ==========================================================================
+   1. LAYOUT KOPFBEREICH
+   ========================================================================== */
+.main-content {
+    width: 95%;
+    max-width: 1000px; /* Perfekte Breite passend zum Screenshot */
+    margin: 60px auto 120px auto;
+    display: flex;
+    flex-direction: column;
+    /* Nutzt die Plus Jakarta Sans als Standard */
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.teams-header {
+    text-align: center;
+    padding: 40px 0 10px 0;
+}
+
+.section-badge {
+    display: block;
+    color: #555560;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.teams-header h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    background: linear-gradient(180deg, #ffffff 40%, #444450 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.teams-subtitle {
+    font-size: 1rem;
+    color: #888895;
+    margin-top: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ==========================================================================
+   2. DASHBOARD MAIN CARD (2-Spalten Layout aus dem Bild)
+   ========================================================================== */
+.team-dashboard-card {
+    background-color: #08090c; /* Sehr edles, fast schwarzes Navy-Dunkel */
+    border: 1px solid rgba(255, 255, 255, 0.03); /* Der ultrafeine Rand */
+    border-radius: 20px;
+    padding: 45px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr; /* Links kompakter, rechts breiter für Text */
+    gap: 60px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    
+    /* HIER GEÄNDERT: Sorgt für den perfekten, edlen Abstand zum nächsten Team */
+    margin-bottom: 40px; 
+    
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Entfernt den Abstand beim allerletzten Element, damit das Layout unten sauber abschließt */
+.team-dashboard-card:last-child {
+    margin-bottom: 0;
+}
+
+/* --- LINKE SEITE --- */
+.dashboard-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-badge-top {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #444450;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.team-main-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.game-subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #444450;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.team-stats-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto; /* Schiebt die Stats nach ganz unten */
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #444450;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.stat-value {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #cccccc;
+    /* Zwingt auch Zahlen, die Plus Jakarta Sans statt Monospace zu nutzen */
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+}
+
+/* Das leuchtende Blau für die Suche (C1 - C2) */
+.stat-value.highlight-blue {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+/* --- RECHTE SEITE --- */
+.dashboard-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title-small {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #444450;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.team-desc-text {
+    font-size: 0.95rem;
+    color: #b0b0b8;
+    line-height: 1.6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.roster-list-box {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Spieler-Link-Reihe mit feinem Klick-Feedback */
+.roster-player-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    text-decoration: none; 
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.roster-player-row:last-child {
+    border-bottom: none;
+}
+
+/* Hover-Effekt: Zeile bekommt leichte Textur und schiebt sich flüssig nach rechts */
+.roster-player-row:hover {
+    background-color: rgba(255, 255, 255, 0.01);
+    padding-left: 6px; 
+}
+
+.player-meta-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.player-name-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Der orangefarbene Captain-Badge aus dem Bild */
+.player-role-badge {
+    background-color: rgba(249, 115, 22, 0.06);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    color: #f97316;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.row-arrow {
+    font-size: 0.8rem;
+    color: #22222a; 
+    transition: all 0.2s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Bei Maus-Hover leuchtet der Pfeil weiß und animiert sich edel nach rechts oben */
+.roster-player-row:hover .row-arrow {
+    color: #ffffff; 
+    transform: translate(2px, -2px); 
+}
+
+/* ==========================================================================
+   3. RESPONSIVE FÜR SMARTPHONES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .team-dashboard-card {
+        grid-template-columns: 1fr; /* Auf Handys untereinander anzeigen */
+        padding: 30px;
+        gap: 40px;
+    }
+    .game-subtitle {
+        margin-bottom: 20px;
+    }
+}
